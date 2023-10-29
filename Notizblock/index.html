@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notizblock</title>
+    <link rel="icon" type="image/x-icon" href="./img/icons8-notes-400.png">
+    <link rel="stylesheet" href="./style/style.css">
+    <script src="script.js"></script>
+</head>
+<body onload="loadAllNotes()">
+    <h6 class="credits">Ghulammustafa Kakar ©</h6>
+    <img id="closeMenu" onclick="toggleMenu()" class="menu-button d-none" src="./img/icons8-löschen-100.png" alt="Menü schließen">
+    <img id="openMenu" onclick="toggleMenu()" class="menu-button" src="./img/icons8-menü-100.png" alt="Menü">
+    <nav id="nav" class="d-none-responsive">
+        <div onclick="loadMyNotesPage()" class="nav notes">
+            <img src="./img/icons8-haftnotizen-100.png" alt="Notizen"><h1>Notizen</h1>
+        </div>
+        <div onclick="loadDeletedNotesPage()" class="nav trash">
+            <img src="./img/icons8-löschen-100 (1).png" alt="Papierkorb"><h1>Papierkorb</h1>
+        </div>
+    </nav>
+    <h1 onload="loadAllDeletedNotes()" id="trash-header" class="trash-header d-none">Papierkorb</h1>
+    <div class="screen">
+        <section id="section-trash" class="section-trash d-none">
+            <div id="myDeletedNotes">
+
+            </div>
+        </section>
+        <section id="section-new" class="section-new">
+            <h1>Neue Notiz</h1>
+            <main class="new-note">
+                <input type="text" placeholder="Titel" id="title">
+                <textarea type="text" placeholder="Notiz schreiben..." id="text"></textarea>
+                <div class="buttons">
+                    <img onclick="cleanNote()" class="red-button" src="./img/icons8-löschen-100-red.png" alt="Verwerfen">
+                    <img onclick="saveNote()" class="green-button" src="./img/icons8-tick-100-green.png" alt="Speichern">
+                </div>
+            </main>
+        </section>
+        </section>
+        <section id="section-notes" class="section-notes">
+            <h1>Meine Notizen</h1>
+            <div id="myNotes">
+
+            </div>
+        </section>
+    </div>
+
+</body>
+</html>

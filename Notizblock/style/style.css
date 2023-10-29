@@ -1,0 +1,404 @@
+@font-face {
+    font-family: 'Product Sans';
+    src: url(./Product\ Sans\ Regular.ttf);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    color: #FFFFFF;
+    font-family: 'Product Sans';
+}
+
+html {
+    background-color: #202124;
+}
+
+.credits {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    opacity: 0.25;
+    margin: 2.5px;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 250px;
+    top: 0;
+    left: 0;
+    position: fixed;
+    padding-top: 20px;
+    gap: 20px;
+    border-right: 1px solid #F5F4F2;
+}
+
+nav h1 {
+    font-size: 20px;
+}
+
+input,
+textarea {
+    background-color: #F5F4F2;
+    border: none;
+    color: black;
+    font-size: 16px;
+    resize: none;
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #FFCB00;
+    border-radius: 5px;
+}
+
+
+
+.nav {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin: 0 20px;
+    padding: 10px;
+}
+
+.nav:hover {
+    background-color: #907612;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+nav img {
+    width: 30px;
+    height: auto;
+    margin-right: 10px;
+}
+
+.screen {
+    position: fixed;
+    display: flex;
+    justify-content: flex-start;
+    top: 0;
+    left: 251px;
+    right: 0;
+    bottom: 0;
+}
+
+.new-note {
+    border-radius: 30px;
+    background-color: #F5F4F2;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    flex-direction: column;
+    height: 250px;
+    width: 90%;
+    padding: 0 15px;
+    border: 5px solid #FFCB00;
+}
+
+.section-new,
+.section-notes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    margin: 30px 45px;
+}
+
+
+.section-notes {
+    overflow-x: hidden;
+    overflow-y: scroll;
+    scrollbar-gutter: stable;
+}
+
+.screen h1 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 30px;
+    padding: 10px 0;
+    gap: 50px;
+
+}
+
+.red-button,
+.green-button {
+    transition: 250ms;
+}
+
+
+.red-button:hover {
+    filter: drop-shadow(0px 0px 4px #FA5252);
+    transform: scale(1.3);
+    cursor: pointer;
+}
+
+.green-button:hover {
+    filter: drop-shadow(0px 0px 4px #94D82D);
+    transform: scale(1.3);
+    cursor: pointer;
+}
+
+.new-note img {
+    width: 30px;
+}
+
+#title {
+    margin: 15px 0;
+    width: 100%;
+    height: 20%;
+    font-size: 20px;
+    text-align: center;
+
+}
+
+#text {
+    width: 100%;
+    height: 80%;
+}
+
+#myNotes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 30px;
+    width: 100%;
+}
+
+.noteContainer {
+    display: flex;
+    flex-direction: column;
+    border: 5px solid #C9C9CE;
+    color: black;
+    border-radius: 30px;
+    background-color: #F5F4F2;
+    height: 250px;
+    width: 90%;
+    padding: 0 15px;
+}
+
+.noteContainer p {
+    color: black;
+    height: 100%;
+    width: 100%;
+}
+
+.noteContainer h1 {
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+    margin: 20px 0;
+}
+
+.noteContainer img {
+    z-index: 1;
+    position: relative;
+    right: 0;
+    width: 30px;
+    margin-left: auto;
+    margin-right: 30px;
+    transition: 250ms;
+    padding: 10px 0;
+}
+
+.noteContainer img:hover,
+.menu-button:hover {
+    transform: scale(1.3);
+    cursor: pointer;
+}
+
+.d-none {
+    display: none !important;
+}
+
+.trash-header {
+    margin-left: 251px;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.section-trash {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin: 92px 45px 30px 45px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    scrollbar-gutter: stable;
+}
+
+#myDeletedNotes {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.section-trash .noteContainer {
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 41.55%;
+    margin: 5px;
+}
+
+.buttons .trash-buttons {
+    padding: 0;
+    margin: 0;
+}
+
+.flex-end {
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.menu-button {
+    display: none;
+    width: 30px;
+    margin: 30px;
+}
+
+/* -------------- @Media Queries -------------- */
+
+@media (max-width: 1260px) {
+    .nav {
+        margin: 0;
+    }
+
+    nav {
+        width: 175px;
+    }
+
+    .screen {
+        left: 176px;
+    }
+
+    .section-new,
+    .section-notes {
+        margin: 30px 30px;
+    }
+
+    .new-note,
+    .noteContainer {
+        width: 88.55%;
+    }
+
+    .section-trash {
+        margin: 92px 30px 30px 30px;
+    }
+
+    .section-trash .noteContainer {
+        margin: 0;
+    }
+
+    .trash-header {
+        margin-left: 176px;
+    }
+}
+
+@media (max-width: 1025px) {
+    .d-none-responsive {
+        display: none !important;
+    }
+
+    nav {
+        display: flex;
+        height: auto;
+        width: 100%;
+        right: 0;
+        z-index: 1;
+        background-color: #202124;
+        gap: 0;
+        padding-bottom: 20px;
+    }
+
+    .nav {
+        justify-content: center;
+        margin: 0 auto;
+    }
+
+    .screen {
+        left: 0;
+    }
+
+    .menu-button {
+        top: 0;
+        left: 0;
+        position: absolute;
+        display: block;
+        z-index: 2;
+        transition: 250ms;
+    }
+
+    .new-note,
+    .noteContainer {
+        width: 87.2%;
+    }
+
+    .trash-header {
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 775px) {
+    .screen {
+        flex-direction: column;
+    }
+
+    .section-new,
+    .section-notes {
+        width: auto;
+    }
+
+    .new-note,
+    .noteContainer {
+        width: 88.58%;
+    }
+
+    #myDeletedNotes {
+        flex-direction: column;
+        justify-content: center;
+        flex-wrap: nowrap;
+    }
+
+    .section-trash {
+        width: auto;
+    }
+
+    .section-trash .noteContainer {
+        flex-basis: auto;
+    }
+}
+
+@media (max-width: 430px) {
+
+    .new-note,
+    .noteContainer {
+        width: 86.74%;
+    }
+}
+
+@media (max-width: 375px) {
+
+    .new-note,
+    .noteContainer {
+        width: 83.86%;
+    }
+}
